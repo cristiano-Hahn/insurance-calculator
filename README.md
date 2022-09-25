@@ -26,7 +26,7 @@ Example of request:
 curl --location --request POST 'http://localhost:8080/risk_profile/calculate' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "age": -1,
+    "age": 20,
     "dependents": "1",
     "income": 6000,
     "marital_status": "single",
