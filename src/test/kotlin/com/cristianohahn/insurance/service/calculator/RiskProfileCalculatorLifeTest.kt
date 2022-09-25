@@ -16,7 +16,6 @@ class RiskProfileCalculatorLifeTest : DescribeSpec() {
         describe("Calculate life risk profile"){
             it("Should be 'ineligible' because age is more or equal than 60"){
                 val command = aRiskProfileCalculateCommandWithAge(60)
-
                 riskProfileCalculatorLife.calculate(command) shouldBe "ineligible"
             }
 
@@ -39,8 +38,6 @@ class RiskProfileCalculatorLifeTest : DescribeSpec() {
                 val command = aRiskProfileCalculateCommandWithDependentsMarriedAndRisk()
                 riskProfileCalculatorLife.calculate(command) shouldBe "responsible"
             }
-
-
         }
     }
 }

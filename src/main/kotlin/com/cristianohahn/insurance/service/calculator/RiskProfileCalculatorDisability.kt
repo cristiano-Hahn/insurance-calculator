@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 class RiskProfileCalculatorDisability : RiskProfileCalculator() {
 
     override fun calculate(command: RiskProfileCalculateCommand): String {
-        if (command.income == 0 || command.age > 60) {
+        if (command.income == 0 || command.age >= 60) {
             return "ineligible"
         }
 
