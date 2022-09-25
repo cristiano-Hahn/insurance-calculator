@@ -1,12 +1,12 @@
 package com.cristianohahn.insurance.service.calculator
 
-import com.cristianohahn.insurance.service.command.RiskCalculateCommand
+import com.cristianohahn.insurance.service.command.RiskProfileCalculateCommand
 
-abstract class RiskCalculator {
+abstract class RiskProfileCalculator {
 
-    abstract fun calculateRiskProfile(command: RiskCalculateCommand): String
+    abstract fun calculate(command: RiskProfileCalculateCommand): String
 
-    protected fun calculateDefaultPoints(command: RiskCalculateCommand): Int {
+    protected fun calculateDefaultPoints(command: RiskProfileCalculateCommand): Int {
         val riskQuestionsPoints = command.riskQuestions.sum()
         val agePoints = when {
             command.age < 30 -> -2

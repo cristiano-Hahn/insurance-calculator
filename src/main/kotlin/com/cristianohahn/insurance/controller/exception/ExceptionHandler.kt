@@ -1,6 +1,6 @@
 package com.cristianohahn.insurance.controller.exception
 
-import com.cristianohahn.insurance.service.exception.CalculateRiskInformationNotValidException
+import com.cristianohahn.insurance.service.exception.RiskProfileInformationNotValidException
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -17,7 +17,7 @@ class ExceptionHandler : ResponseEntityExceptionHandler() {
 
     @ExceptionHandler(value = [Exception::class])
     protected fun handleConflict(
-        ex: CalculateRiskInformationNotValidException?, request: WebRequest?
+        ex: RiskProfileInformationNotValidException?, request: WebRequest?
     ): ResponseEntity<Any?>? {
         return handleExceptionInternal(
             ex!!, ExceptionResponse(ex.message),

@@ -1,12 +1,12 @@
 package com.cristianohahn.insurance.service.calculator
 
-import com.cristianohahn.insurance.service.command.RiskCalculateCommand
+import com.cristianohahn.insurance.service.command.RiskProfileCalculateCommand
 import org.springframework.stereotype.Service
 
 @Service
-class RiskCalculatorHome : RiskCalculator() {
+class RiskProfileCalculatorHome : RiskProfileCalculator() {
 
-    override fun calculateRiskProfile(command: RiskCalculateCommand): String {
+    override fun calculate(command: RiskProfileCalculateCommand): String {
         if (command.house == null) {
             return "ineligible"
         }
