@@ -10,5 +10,4 @@ class RiskProfileInformationNotValidException(violations: Set<ConstraintViolatio
                     "The field ${it.propertyPath} ${it.message}"
                 }
             }"
-    ) {
-}
+    )
