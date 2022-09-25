@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "c41c86ae-15e1-4b4b-8ad1-37d3f745108b",
+		"name": "Insurance app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calculate risk",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"age\", \"\")\r",
+							"pm.environment.set(\"dependents\", \"\")\r",
+							"pm.environment.set(\"income\", \"\")\r",
+							"pm.environment.set(\"marital_status\", \"\")\r",
+							"pm.environment.set(\"risk_questions\", \"[0,0,0]\")\r",
+							"pm.environment.set(\"house.ownership_status\", \"\")\r",
+							"pm.environment.set(\"vehicle.year\", \"\")\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": {{age}},\r\n    \"dependents\": \"{{dependents}}\",\r\n    \"income\": {{income}},\r\n    \"marital_status\": \"{{marital_status}}\",\r\n    \"risk_questions\": {{risk_questions}},\r\n    \"vehicle\": {\r\n        \"year\": {{vehicle.year}}\r\n    },\r\n    \"house\": {\r\n        \"ownership_status\": \"{{house.ownership_status}}\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/risk_profile/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"risk_profile",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
