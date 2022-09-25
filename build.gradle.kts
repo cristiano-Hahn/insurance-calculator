@@ -14,6 +14,8 @@ java.sourceCompatibility = JavaVersion.VERSION_17
 val kotestVersion = "4.6.3"
 val kotestSpringJvmVersion = "4.4.3"
 val kotestConsoleJvmVersion = "4.1.3.2"
+val mockkVersion = "1.12.0"
+val springMockkVersion = "3.0.1"
 
 repositories {
 	mavenCentral()
@@ -32,6 +34,8 @@ dependencies {
 	testImplementation("io.kotest:kotest-assertions-core-jvm:$kotestVersion")
 	testImplementation("io.kotest:kotest-extensions-spring-jvm:$kotestSpringJvmVersion")
 	testImplementation("io.kotest:kotest-runner-console-jvm:$kotestConsoleJvmVersion")
+	testImplementation("io.mockk:mockk:$mockkVersion")
+	testImplementation("com.ninja-squad:springmockk:$springMockkVersion")
 
 	}
 

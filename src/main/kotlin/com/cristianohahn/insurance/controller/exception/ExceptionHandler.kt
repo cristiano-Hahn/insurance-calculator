@@ -15,13 +15,23 @@ class ExceptionHandler : ResponseEntityExceptionHandler() {
 
     data class ExceptionResponse(val errorMessage: String?)
 
-    @ExceptionHandler(value = [Exception::class])
-    protected fun handleConflict(
+    @ExceptionHandler(value = [RiskProfileInformationNotValidException::class])
+    protected fun handleRiskProfileInformationNotValidException(
         ex: RiskProfileInformationNotValidException?, request: WebRequest?
     ): ResponseEntity<Any?>? {
         return handleExceptionInternal(
             ex!!, ExceptionResponse(ex.message),
             HttpHeaders(), HttpStatus.BAD_REQUEST, request!!
+        )
+    }
+
+    @ExceptionHandler(value = [Exception::class])
+    protected fun handleGenericException(
+        ex: RiskProfileInformationNotValidException?, request: WebRequest?
+    ): ResponseEntity<Any?>? {
+        return handleExceptionInternal(
+            ex!!, ExceptionResponse(ex.message),
+            HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request!!
         )
     }
 }
