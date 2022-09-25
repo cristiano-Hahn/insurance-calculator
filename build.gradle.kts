@@ -29,11 +29,14 @@ dependencies {
 	implementation("javax.validation:validation-api:2.0.1.Final")
 	implementation("org.hibernate.validator:hibernate-validator:6.2.5.Final")
 	implementation("org.glassfish:javax.el:3.0.1-b12")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.kotest:kotest-runner-junit5-jvm:$kotestVersion")
 	testImplementation("io.kotest:kotest-assertions-core-jvm:$kotestVersion")
 	testImplementation("io.kotest:kotest-extensions-spring-jvm:$kotestSpringJvmVersion")
-	testImplementation("io.kotest:kotest-runner-console-jvm:$kotestConsoleJvmVersion")
+	testImplementation("io.kotest:kotest-runner-console-jvm:$kotestConsoleJvmVersion") {
+		exclude("com.github.ajalt")
+	}
 	testImplementation("io.mockk:mockk:$mockkVersion")
 	testImplementation("com.ninja-squad:springmockk:$springMockkVersion")
 
