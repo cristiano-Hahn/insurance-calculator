@@ -1,4 +1,4 @@
-package com.cristianohahn.insurance.core.risk.command
+package com.cristianohahn.insurance.service.command
 
 import javax.validation.Valid
 import javax.validation.constraints.Min

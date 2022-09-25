@@ -1,11 +1,11 @@
-package com.cristianohahn.insurance.core.risk.calculator
+package com.cristianohahn.insurance.service.calculator
 
-import com.cristianohahn.insurance.core.risk.command.RiskCalculateCommand
+import com.cristianohahn.insurance.service.command.RiskCalculateCommand
 import org.springframework.stereotype.Service
 import java.util.*
 
 @Service
-class RiskAutoCalculator : RiskCalculator() {
+class RiskCalculatorAuto : RiskCalculator() {
 
     override fun calculateRiskProfile(command: RiskCalculateCommand): String {
         if (command.vehicle == null) {

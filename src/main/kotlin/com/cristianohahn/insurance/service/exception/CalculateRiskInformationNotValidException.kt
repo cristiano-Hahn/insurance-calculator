@@ -1,6 +1,6 @@
-package com.cristianohahn.insurance.core.risk.exception
+package com.cristianohahn.insurance.service.exception
 
-import com.cristianohahn.insurance.core.risk.command.RiskCalculateCommand
+import com.cristianohahn.insurance.service.command.RiskCalculateCommand
 import javax.validation.ConstraintViolation
 
 class CalculateRiskInformationNotValidException(violations: Set<ConstraintViolation<RiskCalculateCommand>>) :

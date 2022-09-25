@@ -1,6 +1,6 @@
-package com.cristianohahn.insurance.adapters.router.exception
+package com.cristianohahn.insurance.controller.exception
 
-import com.cristianohahn.insurance.core.risk.exception.CalculateRiskInformationNotValidException
+import com.cristianohahn.insurance.service.exception.CalculateRiskInformationNotValidException
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

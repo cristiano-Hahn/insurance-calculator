@@ -1,6 +1,6 @@
-package com.cristianohahn.insurance.core.risk.model
+package com.cristianohahn.insurance.model
 
-data class RiskCalculateResult(
+data class RiskProfile(
     val auto: String,
     val disability: String,
     val home: String,

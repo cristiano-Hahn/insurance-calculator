@@ -1,10 +1,10 @@
-package com.cristianohahn.insurance.core.risk.calculator
+package com.cristianohahn.insurance.service.calculator
 
-import com.cristianohahn.insurance.core.risk.command.RiskCalculateCommand
+import com.cristianohahn.insurance.service.command.RiskCalculateCommand
 import org.springframework.stereotype.Service
 
 @Service
-class RiskDisabilityCalculator : RiskCalculator() {
+class RiskCalculatorDisability : RiskCalculator() {
 
     override fun calculateRiskProfile(command: RiskCalculateCommand): String {
         if (command.income == 0 || command.age > 60) {
