@@ -12,43 +12,43 @@ import io.kotest.matchers.shouldBe
 
 class RiskProfileCalculatorDisabilityTest : DescribeSpec() {
 
-    private val riskProfileCalculatorLife = RiskProfileCalculatorDisability()
+    private val riskProfileCalculatorDisability = RiskProfileCalculatorDisability()
 
     init {
         describe("Calculate disability risk profile") {
             it("Should be 'ineligible' because age is more or equal than 60") {
                 val command = aRiskProfileCalculateCommandWithAge(60)
-                riskProfileCalculatorLife.calculate(command) shouldBe "ineligible"
+                riskProfileCalculatorDisability.calculate(command) shouldBe "ineligible"
             }
 
             it("Should be 'ineligible' because income is 0") {
                 val command = aRiskProfileCalculateCommandWithIncome(0)
-                riskProfileCalculatorLife.calculate(command) shouldBe "ineligible"
+                riskProfileCalculatorDisability.calculate(command) shouldBe "ineligible"
             }
 
             it("Should be 'economic' because doesn't have any dependent, isn't married and haven't a mortgaged house") {
                 val command = aDefaultRiskProfileCalculateCommand()
-                riskProfileCalculatorLife.calculate(command) shouldBe "economic"
+                riskProfileCalculatorDisability.calculate(command) shouldBe "economic"
             }
 
             it("Should be 'regular' because have dependents") {
                 val command = aRiskProfileCalculateCommandWithDependents()
-                riskProfileCalculatorLife.calculate(command) shouldBe "regular"
+                riskProfileCalculatorDisability.calculate(command) shouldBe "regular"
             }
 
             it("Should be 'economic' because is married despite have a risk") {
                 val command = aRiskProfileCalculateCommandMarriedWithRisk()
-                riskProfileCalculatorLife.calculate(command) shouldBe "economic"
+                riskProfileCalculatorDisability.calculate(command) shouldBe "economic"
             }
 
             it("Should be 'regular' because have a mortgaged house") {
                 val command = aRiskProfileCalculateCommandMortgaged()
-                riskProfileCalculatorLife.calculate(command) shouldBe "regular"
+                riskProfileCalculatorDisability.calculate(command) shouldBe "regular"
             }
 
             it("Should be 'responsible' because have a dependent, have a mortgaged house and have a risk") {
                 val command = aRiskProfileCalculateCommandWithDependentsMortgagedAndRisk()
-                riskProfileCalculatorLife.calculate(command) shouldBe "responsible"
+                riskProfileCalculatorDisability.calculate(command) shouldBe "responsible"
             }
         }
     }
