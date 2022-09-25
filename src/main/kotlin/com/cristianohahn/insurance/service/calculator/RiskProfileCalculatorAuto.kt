@@ -1,5 +1,6 @@
 package com.cristianohahn.insurance.service.calculator
 
+import com.cristianohahn.insurance.service.calculator.base.RiskProfileCalculator
 import com.cristianohahn.insurance.service.command.RiskProfileCalculateCommand
 import org.springframework.stereotype.Service
 import java.util.*

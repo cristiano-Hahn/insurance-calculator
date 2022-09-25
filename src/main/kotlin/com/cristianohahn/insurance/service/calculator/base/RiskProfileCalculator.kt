@@ -1,4 +1,4 @@
-package com.cristianohahn.insurance.service.calculator
+package com.cristianohahn.insurance.service.calculator.base
 
 import com.cristianohahn.insurance.service.command.RiskProfileCalculateCommand
 
