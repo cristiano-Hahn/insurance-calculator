@@ -19,6 +19,7 @@ class RiskProfileService(
     private val riskProfileCalculatorLife: RiskProfileCalculatorLife,
     private val riskProfileCalculatorDisability: RiskProfileCalculatorDisability,
 ) {
+
     fun calculate(command: RiskProfileCalculateCommand): RiskProfile {
         validateInformation(command)
         return RiskProfile(
