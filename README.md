@@ -82,7 +82,7 @@ Optional: You can just run the tests with the `./gradlew test` command
 
 Note: this service will start on port `8080`, if you want to change it, just change the property `server.port` on `application.properties` file.
 
-###Usage
+### Usage
 
 You can just call the API with `cURL` or use the  [postman collection](docs/Insurance_app.postman_collection.json)  to do it :D
 
