@@ -69,10 +69,10 @@ Clone the repo
 git clone https://github.com/cristiano-Hahn/insurance-calculator.git
 ```
 
-###Execution (With IDE)
+### Execution (With IDE)
 Open the project in your preferred IDE and run the main class **InsuranceApplication**.
 
-###Execution (With command line)
+### Execution (With command line)
 1. Download java JDK 17 ([Download Here](https://jdk.java.net/archive/))
 2. Set the `JAVA_HOME` environment with the path of your downloaded java
 3. Execute the command `./gradlew clean build`, it will build the project and run all the tests
